@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    char s[100];
+    int i, n, c=0;
+    scanf("%s", s);
+    n=strlen(s);
+    for(i=0; i<n; ++i) {
+        if(s[i]>=65 && s[i]<=90)
+            ++c;
+        else if((s[i]>=32 && s[i]<=47) || (s[i]>=58 && s[i]<=64) || (s[i]>=91 && s[i]<=96) || (s[i]>=123 && s[i]<=126)) 
+            ++c;
+    }
+    printf("%d", c);
+    return 0;
+}
