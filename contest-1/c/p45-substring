@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int n, i,j, l,c=0,t=0;
+    char s[100], ss[100];
+    gets(s);
+    gets(ss);
+    n=strlen(s);
+    l=strlen(ss);
+    for(i=0; i<n; ++i) {
+        if(s[i]==ss[0]) {
+            for(j=0; j<l; ++j){
+                if(s[i+j]==ss[j]){
+                    c++;
+                }
+            }
+            if(c==l){
+                printf("yes");
+                t=1;
+                break;
+            }
+            else 
+                c=0;
+        }
+    }    
+    if(t==0) printf("no");
+    return 0;
+}
